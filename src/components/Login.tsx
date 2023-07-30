@@ -115,9 +115,11 @@ export default function Login() {
     return (
 
 
-        <ThemeProvider theme={defaultTheme}>
+        <ThemeProvider theme={defaultTheme} >
+            <div className='box-body'>
 
-            <div >
+            <div  className='box-container' >
+                
                 <Container component="main" maxWidth="xs">
 
 
@@ -213,6 +215,7 @@ export default function Login() {
                     {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
                 </Container>
 
+            </div>
             </div>
         </ThemeProvider>
 

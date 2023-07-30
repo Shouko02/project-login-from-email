@@ -13,15 +13,25 @@ import Login from './components/Login'
 
 
 function App() {
-
+  const Navigate = useNavigate(
+    
+  )
+  const handleNavigateToLogin = () => {
+    // Navigate to '/Login' route
+    Navigate('/Login');
+  };
 
   return (
     <div>
+     
      <Routes>
-     <Route  path="/" />
+      
+        <Route  path="/" />
         <Route  path="/Login" element={<Login/>}/>
         <Route  path="/Profile" element={<Profile/>}/>
         <Route  path="/Users" element={<Users/>}/>
+        
+
      </Routes>
     
     </div>
