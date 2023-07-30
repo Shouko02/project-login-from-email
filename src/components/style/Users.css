@@ -1,35 +1,92 @@
-*{
-  padding-top: 1rem;
-    margin: 0 auto;
-}
-body{
+
+/* nav{
     background-color: #5dacf2;
+} */
+body{
+  background-color: #f48d4e;
+
+  /* padding-left: 500px;
+  padding-right: 500px; */
 }
 .container {
+    padding: 1rem;
+    background-color: #4aa2f5;
+    box-shadow: 0px 0px 5px 5px #e2680a;
+    /* border: 2px solid rgb(38, 255, 0); */
+    height: 100px;
+    display: flex;
+    
+
+
   
-    /* text-align: center; */
-    /* margin: 0 auto; */
-    background-color: #a8bfd4;
-    box-shadow: 0px 0px 5px 5px #f5957c;
-    border-radius: 20px;
-    /* padding: 100px 100px; */
-   max-width: 650px;
+  }
+
+  .img-pro{
+    width: 30px;
+    border-radius: 100%;
+    
+
+  }
+  .logo {
+/* margin: 0 auto; */
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    width: 20px;
+
+}
+
+   .box {
+      /* border: 2px solid rgb(211, 9, 233); */
+      border-radius: 10px;
+      /* background-color: #f5957c; */
+      width: 250px;
+      margin-left: top;
+      height: 100px;
+      padding: 5px;
+
+    }
    
-    
-  
-  }
-  h3{
-    color: brown;
-  }
-  p{
-    margin-right: 300px
-  }
-  img{
-    width: 85px;
-    border-radius: 50%;
-    margin-right: 30rem;
-    height: 100%;
-    
-  }
+    .box-img{
+      margin-right: top;
+      border: 2px solid rgb(255, 0, 0);
+      border-radius: 10px;
+      width: 100px;
+      font-size: 2px;
+      text-align: center;
+      margin-Right:auto;
+      padding:44px 22px;
+      margin-Left:auto;
+      margin-Right:10px;
+    }
+    .name{
+      font-size: 12px;
+      /* border: 2px solid rgb(227, 225, 58); */
+    }
+    /* .boxzing{
+      border: 2px solid rgb(236, 111, 9);
+    } */
 
+    /* .btn-box{
+      border: 2px solid rgb(129, 144, 228);
+      width: 30%;
+    } */
+    .btn-logout{
 
+      border-radius: 5px;
+      border: 2px solid salmon;
+      /* margin-top: auto; */
+      display: inline-flex;
+      align-items: center;
+      /* padding-top: 0rem !important; */
+      box-sizing: content-box;
+      text-align: center;
+      /* padding: 10px;
+      width: 400px;
+      max-width: 100%; */
+      width: 25%;
+    
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+    }

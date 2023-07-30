@@ -1,13 +1,45 @@
-body{
-    background-color: #ffffff;
-}
 
-.container1{
-     text-align: center;
+.table{
+    padding: 3rem;
+
+}
+.container-box{
+    padding: 3rem;
  
-    background-color: #858585;
-    box-shadow: 0px 0px 5px 5px #ea5151;
-    border-radius: 20px;
-left: 100px;
-height: 200px;
+    /* border: 2px solid salmon; */
+    margin: 0 auto;
+    text-align:center;
+    border-radius: 10px ;
+    box-shadow: 0px 0px 5px 5px #d56262;
+    background-color: aliceblue;
+    width: 30%;
+
+
+}
+.btn-Login  {
+    border-radius: 5px;
+    border: 2px solid salmon;
+    /* margin-top: auto; */
+    display: inline-flex;
+    align-items: center;
+    /* padding-top: 0rem !important; */
+    box-sizing: content-box;
+    text-align: center;
+    /* padding: 10px;
+    width: 400px;
+    max-width: 100%; */
+    width: 97%;
+  
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.logo1 {
+
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    width: 20px;
+
+
 }
