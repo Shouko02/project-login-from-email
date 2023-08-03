@@ -7,22 +7,25 @@ import { gapi } from 'gapi-script'
 import { Navigate, Route, Routes, useNavigate } from 'react-router-dom'
 
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+// import FormControlLabel from '@mui/material/FormControlLabel';
+// import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+// import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createMuiTheme, createTheme, ThemeProvider } from '@mui/material/styles';
 
 import axios from 'axios';
 
+import Swal from 'sweetalert2'
+
+// CommonJS
 
 
 
@@ -41,18 +44,31 @@ function Copyright(props: any) {
 }
 
 // TODO remove, this demo shouldn't need to reset the theme. 
-const defaultTheme = createTheme();
-
+// const defaultTheme = createTheme();
+const backgroundImage = "https://w.wallhaven.cc/full/xl/wallhaven-xl6v7v.jpg";
+const defaultTheme = createTheme({
+    palette: {
+        primary: {
+            main: '#1976d2',
+        },
+        secondary: {
+            main: '#f50057',
+        },
+    },
+});
 export default function Login() {
 
 
 
-
-
+    const Swal = require('sweetalert2')
     const Navigate = useNavigate()
     const clientId = "569867947471-3u50fsvra6alk7ohbncjv43gejvqtm6t.apps.googleusercontent.com"
 
     const [profile, setprofile] = useState<any>(null)
+    const ip = "http://192.168.1.7"
+    interface LoginPageProps {
+        setLoggedIn: (arg0: boolean) => void;
+      }
 
     useEffect(() => {
         const initClient = () => {
@@ -64,38 +80,46 @@ export default function Login() {
         gapi.load("client:auth2", initClient)
     }, [])
 
-
-
-
     const onSucces = async (res: any) => {
         setprofile(res.profileObj)
         console.log('succes', res)
         // e.preventDefault()
 
-        setprofile(async (value: any) => {
+        // setprofile(async (value: any) => {
 
-            ///เชื่อมต่อ databaese
-            const userData = {
-                name: res.profileObj.name,
-                email: res.profileObj.email,
-            };
+        //     ///เชื่อมต่อ databaese
+        //     const userData = {
+        //         userName: res.profileObj.name,
+        //         userGmail: res.profileObj.email,
+        //         userImage: res.profileObj.imageUrl,
+        //     };
 
-            const response = await axios.post('http://localhost:8080/api/gmail', userData);
-            console.log('API response:', response.data);
+        //     const response = await axios.post(ip + ':8000/api/insert/user', userData);
+        //     console.log('API response:', response.data);
 
-            // localStorage.setItem('UsersId', res.tokenId);
-            // localStorage.setItem('UsersObj', res.tokenObj);
             localStorage.setItem('token', res.accessToken);
-            alert(userData)
-            
-            Navigate('/Users')
 
-        })
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success' ,
+                Navigate('/Users')
+            )
+
+           
+
+        // })
 
     }
 
     const onError = (res: any) => {
         console.log('failure', res)
+        Swal.fire(
+            'Good job!',
+            'You clicked the button!',
+            'error' ,
+            Navigate('/login')
+        )
     }
 
 
@@ -115,108 +139,115 @@ export default function Login() {
     return (
 
 
-        <ThemeProvider theme={defaultTheme} >
-            <div className='box-body'>
+        <ThemeProvider theme={defaultTheme}                               >
+            {/* <CssBaseline /> */}
+            <div style={{ backgroundImage: `url(${backgroundImage})`, height: '100vh', backgroundSize: 'cover' }}>
+                {/* Your components and routes go here */}
 
-            <div  className='box-container' >
-                
-                <Container component="main" maxWidth="xs">
+                <div className='box-body'>
 
 
-                    <CssBaseline />
-                    <Box
-                        sx={{
-                            marginTop: 8,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
-                    >
-                        {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                    <div className='box-container' >
+
+                        <Container component="main" maxWidth="xs">
+
+
+                            <CssBaseline />
+                            <Box
+                                sx={{
+                                    marginTop: 8,
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                         <LockOutlinedIcon />
                     </Avatar> */}
-                        <Typography component="h1" variant="h5">
-                            Sign in
-                        </Typography>
-                        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-                            <TextField
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="email"
-                                label="Email Address"
-                                name="email"
-                                autoComplete="email"
-                                autoFocus
-                            />
-                            <TextField
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="password"
-                                label="Password"
-                                type="password"
-                                id="password"
-                                autoComplete="current-password"
-                            />
-                            <div >
-                                {/* <h2>What to the check out this file? Sign up or Login</h2>
+                                <Typography component="h1" variant="h5">
+                                    Sign in
+                                </Typography>
+                                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        id="email"
+                                        label="Email Address"
+                                        name="email"
+                                        autoComplete="email"
+                                        autoFocus
+                                    />
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        name="password"
+                                        label="Password"
+                                        type="password"
+                                        id="password"
+                                        autoComplete="current-password"
+                                    />
+                                    <div >
+                                        {/* <h2>What to the check out this file? Sign up or Login</h2>
                 <br />
                 <br /> */}
-                                <GoogleLogin
-                                    render={renderProps => (
-                                        <button onClick={renderProps.onClick}
-                                            className='btn-Login'
-                                        >
-                                            <img className='logo1' src="images/Google.png" />
-                                            This is Login Google
-                                        </button>
-                                    )}
-                                    
-                                    clientId={clientId}
-                                    onSuccess={onSucces}
-                                    onFailure={onError}
-                                    cookiePolicy='single_host_origin'
-                                    isSignedIn={true}
-                                />
-                            </div>
+                                        <GoogleLogin
+                                            render={renderProps => (
+                                                <button onClick={renderProps.onClick}
+                                                    className='btn-Login'
+                                                >
+                                                    <img className='logo1' src="images/Google.png" />
+                                                    This is Login Google
+                                                </button>
+                                            )}
+
+                                            clientId={clientId}
+                                            onSuccess={onSucces}
+                                            onFailure={onError}
+                                            cookiePolicy='single_host_origin'
+                                            isSignedIn={true}
+                                            // scope="email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile" 
+                                        />
+                                    </div>
 
 
 
 
 
-
-                            {/* <FormControlLabel
+                                    {/* <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               /> */}
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                sx={{ mt: 3, mb: 2 }}
-                            >
-                                Sign In
-                            </Button>
-                            <Grid container>
-                                <Grid item xs>
-                                    {/* <Link href="#" variant="body2">
+                                    <Button
+                                        type="submit"
+                                        fullWidth
+                                        variant="contained"
+                                        sx={{ mt: 3, mb: 2 }}
+                                    >
+                                        Sign In
+                                    </Button>
+                                    <Grid container>
+                                        <Grid item xs>
+                                            {/* <Link href="#" variant="body2">
                     Forgot password?
                   </Link> */}
-                                </Grid>
-                                <Grid item>
-                                    {/* <Link href="#" variant="body2">
+                                        </Grid>
+                                        <Grid item>
+                                            {/* <Link href="#" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link> */}
-                                </Grid>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
-                </Container>
+                                        </Grid>
+                                    </Grid>
+                                </Box>
+                            </Box>
+                            {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
+                        </Container>
 
+                    </div>
+                </div>
             </div>
-            </div>
+
         </ThemeProvider>
 
     );

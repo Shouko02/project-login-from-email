@@ -3,7 +3,7 @@
     background-color: #5dacf2;
 } */
 body{
-  background-color: #f48d4e;
+  background-color: #739af5;
 
   /* padding-left: 500px;
   padding-right: 500px; */
@@ -11,7 +11,9 @@ body{
 .container {
     padding: 1rem;
     background-color: #4aa2f5;
-    box-shadow: 0px 0px 5px 5px #e2680a;
+    background-color: rgba(10, 145, 186, 0.495);
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 0px 5px 5px #5c3313;
     /* border: 2px solid rgb(38, 255, 0); */
     height: 100px;
     display: flex;
@@ -44,6 +46,7 @@ body{
       margin-left: top;
       height: 100px;
       padding: 5px;
+   
 
     }
    
@@ -52,7 +55,7 @@ body{
       border: 2px solid rgb(255, 0, 0);
       border-radius: 10px;
       width: 100px;
-      font-size: 2px;
+      font-size: 12px;
       text-align: center;
       margin-Right:auto;
       padding:44px 22px;
@@ -84,9 +87,80 @@ body{
       /* padding: 10px;
       width: 400px;
       max-width: 100%; */
-      width: 25%;
+      width: 30%;
     
       padding-top: 10px;
       padding-bottom: 10px;
 
+    }
+    .img-choice{
+      width: 70px;   
+      border: 2px solid rgb(21, 2, 1);
+      border-radius: 1rem;
+      /* padding: 5px; */
+      display: flex;
+      /* height: inherit; */
+
+    }
+    .img-box-choice{
+      padding: 5px;
+      border: 2px solid rgb(21, 2, 1);
+    }
+    /* .box-choice{
+      border: 3px solid rgb(25, 2, 109);
+    } */
+    .checked{
+      scale: 0.8;
+      opacity:0.5 ;
+      
+      
+    }
+
+    .overlay{
+      background-color:#25252529 ;
+      display: flex;
+    }
+    .modal,.overlay{
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+    }
+    .modal-content{
+      /* position: absolute;
+      top: 40%;
+      left: 50%;
+      right: 50%;
+      bottom: 0; */
+      position: absolute;
+    
+     
+    }
+  
+    .btn-modal{
+      padding: 10px 20px;
+      display: block;
+      /* margin: 100px auto 0; */
+      margin: 0  auto;
+    }
+    .modal{
+      border: 3px solid rgb(25, 2, 109);
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+      height: fit-content;
+      width: 80%;
+      margin:  0 auto;
+      margin-top: 130px;
+      padding: 3rem;
+      display: flex;
+      position: absolute;
+      /* text-align: center; */
+    }
+    .btn-close{
+     /* margin-left: t; */
+     /* margin-top: 100px; */
+     margin: 0 auto;
     }
