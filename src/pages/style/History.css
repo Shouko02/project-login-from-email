@@ -1,0 +1,262 @@
+.containerP {
+  /* background-color: rgb(175, 8, 8); */
+  /* width: 100vw; */
+  max-width: 100%;
+  /* height: 100vh; */
+  padding-top: 1%;
+  padding: 3rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.text-header {
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  border-radius: 1rem;
+  /* background-color: rgba(2, 57, 255, 0.187);
+    backdrop-filter: blur(10px); */
+  margin: 0 auto;
+}
+
+.history {
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  /* width: 900px; */
+  max-width: 100%;
+  height: 500px;
+  max-height: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding: 2rem;
+  flex-wrap: wrap;
+  display: block;
+  box-shadow: 0px 0px 5px 5px #34343477;
+  scrollbar-width: none;
+
+}
+
+.table-his {
+  /* padding: 1rem; */
+  border-radius: 1rem;
+  /* background-color: rgba(2, 57, 255, 0.255);
+    backdrop-filter: blur(10px); */
+  width: 900px;
+  max-width: 100%;
+
+  /* height: 200px;  */
+  /* flex-wrap: wrap; */
+  display: flex;
+  /* margin-right: 1rem; */
+}
+
+.choice-id {
+  /* display: flex; */
+  position: relative;
+  /* display: flex;
+   flex-wrap: wrap; */
+  border: 2px solid #000000;
+  border-radius: 10px;
+
+  padding: 1px;
+  /* padding-top: 1rem; */
+  color: #000000;
+  /* background-color: #ffffff7e;
+    backdrop-filter: blur(10px); */
+  /* width: 150px;
+    max-width: 100%;
+    height: 30px; */
+  height: 20px;
+  width: 110px;
+  max-width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 11px;
+
+
+}
+
+.img-card {
+  width: 150px;
+}
+
+.img-info {
+
+  /* display: flex; */
+
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  padding: 4px;
+  color: #000000;
+  background-color: #ffffff7e;
+  backdrop-filter: blur(10px);
+  text-align: center;
+
+
+}
+
+.show-img {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(2, 57, 255, 0.255);
+  backdrop-filter: blur(10px);
+  width: 200px;
+  max-width: 100%;
+  height: 200px;
+
+}
+
+.table-A {
+  /* background-color: rgba(32, 4, 110, 0.255);
+    backdrop-filter: blur(10px); */
+  flex-wrap: inherit;
+  display: flex;
+  width: 70rem;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0px 10px 0px 10px;
+  padding-left: 0;
+  /* border: 2px solid #000000; */
+  align-items: center;
+}
+
+.Like-box {
+  /* background-color: rgba(32, 4, 110, 0.255);
+    backdrop-filter: blur(10px); */
+  width: 650px;
+  /* margin-right: 1rem; */
+  border-radius: 10px 0px 0px 10px;
+  padding: 20px;
+  background-color: #145B5D;
+
+}
+
+/* .none-box{
+    background-color: #145B5D;
+    width: 10px;
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+    height: 126px;
+    margin-left: 430px;
+  } */
+.DisLike-box {
+  /* display: flex; */
+
+  /* display: inherit; */
+  /* background-color: rgba(32, 4, 110, 0.255);
+    backdrop-filter: blur(10px); */
+  width: 300px;
+  /* border-radius: 0px 10px 10px 0px; */
+  padding: 20px;
+  background-color: #D9D9D9;
+}
+
+.btn-back {
+  margin-left: 5rem;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  display: flex;
+  padding: 0px 11px 0px 8px;
+  height: 30px;
+  background-color: #5A80DF;
+  color: #ffff;
+  border: 1px solid#5A80DF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 2px #3434344d;
+
+}
+
+.btn-back:hover {
+  background-color: #2f5ed5eb;
+}
+
+.p-back {
+  color: #ffff;
+
+}
+
+.section1 {
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.section2 {
+  color: #145B5D;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .table-his {
+    margin: -6%;
+    width: 500px;
+    display: block;
+  }
+
+  .table-A {
+    margin: -9%;
+    width: 258px;
+    padding: 1rem;
+
+  }
+
+  .img-card {
+    width: 50px;
+  }
+
+  .img-info {
+    height: 40px;
+    position: absolute;
+    margin-top: 5rem;
+
+  }
+
+  .choice-id {
+
+    width: fit-content;
+    padding: 2px;
+  }
+
+  .containerP {
+    padding: 1rem;
+  }
+
+  .table-his {
+    height: 500px;
+  }
+
+  .Like-box {
+    height: 100px;
+    width: 300px;
+    border-radius: 9px;
+
+
+  }
+
+  .DisLike-box {
+    height: 100px;
+    border-radius: 9px;
+  }
+  .date-his{
+    
+  }
+
+  .history {}
+}

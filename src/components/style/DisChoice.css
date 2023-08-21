@@ -1,0 +1,147 @@
+.img-choice {
+    width: 20%;
+    height: auto;
+    border: 2px solid rgb(21, 2, 1);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0px 0px 2px 2px #201f1f5a;
+
+
+
+
+}
+
+.img-box-choice {
+    /* padding: 1px; */
+    box-sizing: border-box;
+    display: grid;
+    /* border: 2px solid salmon; */
+    justify-content: center;
+    margin: 8px;
+    margin-top: 0;
+
+}
+
+.text-choice1 {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 4px;
+    color: #ae4413;
+  cursor: pointer;
+
+
+}
+
+@media (max-width: 480px) {
+    .text-choice1 {
+        /* Further adjust the width to fit mobile screens */
+
+        padding: 0;
+        margin: 0 auto;
+        /* Adjust padding for smaller screens */
+    }
+
+    .box-choice {
+        margin: 0 auto;
+        padding: 0;
+
+        display: flex;
+        /* align-items: center; */
+    }
+
+    .img-box-choice {
+        margin: 3px;
+    }
+
+
+
+}
+
+.box-choice {
+    /* border: 3px solid rgb(25, 2, 109); */
+    justify-content: center;
+    /* text-align: justify; */
+    padding: 1rem;
+}
+
+.checked {
+    scale: 0.8;
+    opacity: 1;
+
+
+}
+
+.checked .text-choice1 {
+    border: 3px solid #ff0000;
+}
+
+.overlay {
+    background-color: #3a393925;
+    display: flex;
+}
+
+/* .modal,.overlay{
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+    } */
+/* .modal-content{
+      top: 40%;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      position: absolute;
+    
+     
+    } */
+
+    .text-choice1{
+        border: 2px solid #000000;
+        border-radius: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+      
+        padding: 4px;
+        color: #000000;
+        background-color: #ffffff76;
+        backdrop-filter: blur(10px);
+        
+      }
+
+.btn-submit {
+    padding: 10px 20px;
+    display: block;
+    /* margin: 100px auto 0; */
+    margin: 0 auto;
+    border-radius: 5px;
+    box-sizing: content-box;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #000000; 
+    border-radius: 5px;
+    background-color: #4183FF;
+    backdrop-filter: blur(10px);
+    /* box-shadow: 0px 0px 2px 2px #201f1f5a; */
+
+}
+.btn-submit:hover{
+    color: #42ee3c;
+
+}
+
+
+
+.btn-close {
+    /* margin-left: t; */
+    /* margin-top: 100px; */
+    margin: 0 auto;
+}
+.swal2-container{
+    z-index: 9999;
+}
